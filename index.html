@@ -1,0 +1,138 @@
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grêmio Estudantil</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js" defer></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  </style>
+</head>
+
+<body class="hidden">
+  <header>
+    <div class="social-links">
+      <a href="https://www.instagram.com/ATOMFL" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png"
+          alt="Instagram">
+      </a>
+      <span>Sociais</span>
+    </div>
+
+    <nav>
+      <button id="inicio" class="nav-button">Início</button>
+      <button id="feedback" class="nav-button">Feedback</button>
+      <button id="membros" class="nav-button">Membros</button>
+    </nav>
+    
+    <div class="atom-container">
+      <h1 id="atom-text" class="atom-text">GREMIO ATOM</h1>
+      <img id="header-image" class="header-image" src="https://cdn.discordapp.com/attachments/1335779209485881359/1349497255974932582/02bff504-a4be-4189-a22d-29c61d063f0e.png?ex=67d350c2&is=67d1ff42&hm=f4a9487d18ea3ec97d68d733e11fbe50d58d71f957759874696a8040b683ae35&" alt="Grêmio Image">
+    </div>
+  </header>
+
+  <main id="content">
+    <section id="inicio-section" class="active-section">
+      <h2>Bem-vindos ao Grêmio <span style="color:#558BFF; text-shadow: 0 0 5px #558BFF;">ATOM</span>!</h2>
+      <p>Espaço dedicado à voz dos estudantes.</p>
+      <h3>Nossas Propostas</h3>
+        <ul>
+            <li>
+                <h4>Iniciativas de Eventos Clássicos (I.E.C)</h4>
+                <p><strong>Proposta:</strong> Retomar os interclasses antigos, focando em competições esportivas entre as turmas. Serão oferecidas modalidades variadas como futsal, vôlei, basquete e atletismo, incentivando a participação de todos os alunos, independentemente do nível técnico.</p>
+                <p>Além disso, haverá premiações para destacar o espírito esportivo e a cooperação entre os times, promovendo valores como respeito e trabalho em equipe.</p>
+                <p><strong>Objetivo:</strong> Fortalecer o senso de comunidade escolar, proporcionando momentos de lazer e integração através do esporte.</p>
+                <!-- Place image related to classic sports events here -->
+            </li>
+            <li>
+                <h4>Iniciativas de Eventos Modernos (I.E.M)</h4>
+                <p><strong>Proposta:</strong> Implementação de oficinas de tecnologia e inovação, incluindo robótica pedagógica e desenvolvimento de projetos científicos práticos. Os alunos poderão aprender sobre programação básica, montagem de circuitos e automação, sempre com aplicação voltada para o ensino e aprendizado.</p>
+                <p>Além disso, haverá competições saudáveis de projetos inovadores, onde os estudantes poderão desenvolver soluções para problemas do dia a dia na escola.</p>
+                <p><strong>Objetivo:</strong> Estimular o interesse por ciência e tecnologia, alinhado às diretrizes pedagógicas, incentivando o pensamento crítico e a criatividade.</p>
+                <!-- Place image related to technology and innovation workshops here -->
+            </li>
+            <li>
+                <h4>Reclame Aqui</h4>
+                <p><strong>Proposta:</strong> Criar um canal de comunicação entre os alunos e o Grêmio através de QR codes espalhados pelos corredores, onde os estudantes poderão enviar sugestões e reclamações de forma rápida e anônima.</p>
+                <p>Essas mensagens serão compiladas e analisadas pelo Grêmio para propor soluções junto à direção da escola.</p>
+                <p><strong>Objetivo:</strong> Tornar o Grêmio mais acessível e responsivo às necessidades dos alunos, garantindo que suas vozes sejam ouvidas e que melhorias sejam implementadas de forma contínua.</p>
+                <!-- Place image related to QR codes and student feedback here -->
+            </li>
+            <li>
+                <h4>Reformulação do Proatec Mirim (R.P.M)</h4>
+                <p><strong>Proposta:</strong> Revisar o programa do Proatec Mirim para que ele tenha um impacto maior no desenvolvimento dos alunos. A ideia é criar benefícios extras, como certificados de participação e pequenos incentivos acadêmicos para quem se destaca no auxílio das atividades da escola.</p>
+                <p><strong>Objetivo:</strong> Valorizar o engajamento dos alunos na organização e funcionamento da escola, tornando o Proatec Mirim uma experiência enriquecedora tanto para os estudantes quanto para a comunidade escolar.</p>
+                <!-- Place image related to Proatec Mirim program here -->
+            </li>
+        </ul>
+    </section>
+
+    <section id="feedback-section" class="hidden-section">
+      <h2>Deixe seu Feedback</h2>
+      <div id="anonymous-check-container">
+        <input type="checkbox" id="anonymous-check">
+        <label for="anonymous-check" id="anonymous-check-label">Desejo enviar anonimamente</label>
+      </div>
+      <p id="anonymous-check-description">Caso a opção de colocar nome e série não apareça, ative e desative a opção (desejo enviar anonimamente) para corrigir o erro</p>
+
+      <div id="feedback-form">
+        <input type="text" id="name" placeholder="Nome (Opcional)" style="display: none;"><br>
+        <input type="text" id="serie" placeholder="Série (Opcional)" style="display: none;"><br>
+        <textarea id="feedback-text" placeholder="Escreva aqui..."></textarea>
+        <button id="submit-feedback">Enviar Feedback</button>
+      </div>
+    </section>
+
+    <section id="membros-section" class="hidden-section">
+      <h2>Membros Atuais</h2>
+      <ul>
+        <li>
+          <h4>Presidente</h4>
+          <p>Arthur 2B - Responsável pela liderança geral e representação do grêmio.</p>
+        </li>
+        <li>
+          <h4>Vice-Presidente</h4>
+          <p>João 2A - Auxilia o presidente e assume suas funções na ausência.</p>
+        </li>
+        <li>
+          <h4>Comunicação</h4>
+          <p>Geovana 3B - Encarregada da comunicação interna e externa do grêmio.</p>
+        </li>
+        <li>
+          <h4>Finanças</h4>
+          <p>Rodrigo 2A - Gerencia os recursos financeiros do grêmio.</p>
+        </li>
+        <li>
+          <h4>Esporte</h4>
+          <p>Rafael 1A - Organiza e promove atividades esportivas na escola.</p>
+        </li>
+        <li>
+          <h4>Eventos</h4>
+          <p>Yasmin 1C - Planeja e coordena eventos escolares.</p>
+        </li>
+        <li>
+          <h4>Cultural</h4>
+          <p>Vinícius 8A - Promove atividades culturais e artísticas.</p>
+        </li>
+        <li>
+          <h4>Presidente tecnológico</h4>
+          <p>Léo 2A - Lidera as iniciativas tecnológicas do grêmio.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>developer: Bilu/Leonardo 2 A</p>
+    <img src="https://cdn.discordapp.com/attachments/1335779209485881359/1349507098047807528/263d8cdca5bedc16f605f3a3cf098e36.jpg?ex=67d359ec&is=67d2086c&hm=01270bd625082c2982615295f74f0fd8c918102f8b64c000e6e556d6502bc89a&" alt="Developer Image">
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('loaded');
+    });
+  </script>
+</body>
+
+</html>
