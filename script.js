@@ -2,10 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const inicioBtn = document.getElementById('inicio');
     const feedbackBtn = document.getElementById('feedback');
     const membrosBtn = document.getElementById('membros');
+    const noticiasBtn = document.getElementById('noticias');
 
     const inicioSection = document.getElementById('inicio-section');
     const feedbackSection = document.getElementById('feedback-section');
     const membrosSection = document.getElementById('membros-section');
+    const noticiasSection = document.getElementById('noticias-section');
     const headerImage = document.getElementById('header-image');
     const atomText = document.getElementById('atom-text');
     let atomTextContent = "GRÊMIO ATOM"; // Store the original text
@@ -56,6 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
     membrosBtn.addEventListener('click', () => {
         showSection(membrosSection);
         setActiveButton(membrosBtn);
+    });
+
+    noticiasBtn.addEventListener('click', () => {
+        showSection(noticiasSection);
+        setActiveButton(noticiasBtn);
     });
 
     // Set "Início" as default active
@@ -117,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Remove notification after 3 seconds
         setTimeout(() => {
             notification.classList.remove('show');
+            notification.style.transition = 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out'; // Restore the default transition
             setTimeout(() => {
                 body.removeChild(notification);
             }, 300); // Small delay to allow fade-out transition
