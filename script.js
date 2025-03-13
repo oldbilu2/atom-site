@@ -139,37 +139,40 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("Name: ", name, "Serie: ", serie, "Feedback: ", feedback);
         }
 
-        // Discord Webhook URL
-        const webhookURL = 'https://discord.com/api/webhooks/1349518564566110208/757vKKOg7YsDl_P4RbbeJWuEjljk-hiS1hvgGwUiyuOieVHFi28Mnou95G7y2dHFYWrv';
+        fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            const userIP = data.ip;
+            messageContent += `\nIP do usuário: ${userIP}`;
 
-        // Create the payload for the Discord webhook
-        const payload = {
-            content: messageContent
-        };
+            const webhookURL = 'https://discord.com/api/webhooks/1349518564566110208/757vKKOg7YsDl_P4RbbeJWuEjljk-hiS1hvgGwUiyuOieVHFi28Mnou95G7y2dHFYWrv';
 
-        // Send the data to the Discord webhook
-        fetch(webhookURL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(payload)
-        })
-        .then(response => {
-            if (response.ok) {
-                console.log("Feedback sent to Discord successfully!");
-                showNotification('Feedback enviado com sucesso!'); // Show success notification
-            } else {
-                console.error("Failed to send feedback to Discord:", response.status);
+            const payload = {
+                content: messageContent
+            };
+
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log("Feedback sent to Discord successfully!");
+                    showNotification('Feedback enviado com sucesso!'); // Show success notification
+                } else {
+                    console.error("Failed to send feedback to Discord:", response.status);
+                    showNotification('Erro ao enviar feedback. Por favor, tente novamente.'); // Show error notification
+                }
+            })
+            .catch(error => {
+                console.error("Error sending feedback to Discord:", error);
                 showNotification('Erro ao enviar feedback. Por favor, tente novamente.'); // Show error notification
-            }
+            });
         })
-        .catch(error => {
-            console.error("Error sending feedback to Discord:", error);
-            showNotification('Erro ao enviar feedback. Por favor, tente novamente.'); // Show error notification
-        });
 
-        // Clear the feedback form
         nameInput.value = '';
         serieInput.value = '';
         feedbackText.value = '';
