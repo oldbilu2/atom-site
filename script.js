@@ -19,6 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body; // Added to append notification
     let feedbackCount = 0;
 
+    // Function to retrieve the liked status from local storage
+    function getLikedStatus() {
+      return localStorage.getItem('newsLiked') === 'true';
+    }
+
+    // Function to save the liked status to local storage
+    function setLikedStatus(liked) {
+      localStorage.setItem('newsLiked', liked);
+    }
+
+    // Function to retrieve the like count from local storage
+    function getLikeCount() {
+      const count = localStorage.getItem('likeCount');
+      return count ? parseInt(count) : 0;
+    }
+
+    // Function to save the like count to local storage
+    function setLikeCount(count) {
+      localStorage.setItem('likeCount', count);
+    }
+
     function showSection(section) {
         // Hide all sections
         const sections = document.querySelectorAll('section');
@@ -187,5 +208,45 @@ document.addEventListener('DOMContentLoaded', () => {
         anonymousCheck.checked = false;
         nameInput.style.display = 'block';
         serieInput.style.display = 'block';
+    });
+
+    const likeButton = document.getElementById('like-button');
+    const likeIcon = document.getElementById('like-icon');
+    const likeCountElement = document.getElementById('like-count');
+
+    // Load the initial liked status and like count from local storage
+    let liked = getLikedStatus();
+    let likeCount = getLikeCount();
+
+    // Update the UI based on the loaded status
+    if (liked) {
+        likeIcon.textContent = '🖤';
+    } else {
+        likeIcon.textContent = '❤️';
+    }
+
+    likeCountElement.textContent = likeCount;
+
+    likeButton.addEventListener('click', () => {
+        if (!liked) {
+            // If not liked, like it
+            liked = true;
+            likeCount++;
+            likeIcon.textContent = '🖤';
+            likeIcon.classList.add('liked'); // Add the 'liked' class
+            setTimeout(() => {
+                likeIcon.classList.remove('liked'); // Remove the 'liked' class after the animation
+            }, 200); // Remove after 200ms to match transition duration
+        } else {
+            // If already liked, unlike it
+            liked = false;
+            likeCount--;
+            likeIcon.textContent = '❤️';
+        }
+
+        // Update the UI and save the status and count to local storage
+        likeCountElement.textContent = likeCount;
+        setLikedStatus(liked);
+        setLikeCount(likeCount);
     });
 });
