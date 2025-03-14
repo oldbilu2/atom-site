@@ -474,10 +474,12 @@ button:hover {
 }
 
 #noticias-section p {
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #eee;
     text-align: center;
-    animation: fadeInOut 2s infinite alternate; /* Apply the fade-in-out animation */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 0 20px;
 }
 
 @keyframes fadeInOut {
@@ -540,4 +542,36 @@ footer img {
     to {
         text-shadow: 0 0 15px rgba(168, 85, 255, 0.7);
     }
+}
+
+#like-button {
+    background-color: #558BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 8px; 
+    font-size: 1.1em; 
+    box-shadow: 0 2px 5px rgba(85, 139, 255, 0.5); 
+}
+
+#like-button:hover {
+    background-color: #3d70d6;
+    transform: scale(1.05); 
+    box-shadow: 0 4px 10px rgba(85, 139, 255, 0.7); 
+}
+
+#like-icon {
+    font-size: 1.2em; 
+    line-height: 0; 
+    transition: transform 0.2s ease-in-out;
+}
+
+#like-icon.liked {
+    transform: scale(1.5);
 }
