@@ -1,0 +1,208 @@
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grêmio Estudantil</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js" defer></script>
+</head>
+
+<body class="hidden">
+  <script>
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if ((e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || e.key === 'F12') {
+        e.preventDefault();
+      }
+    });
+  </script>
+  <header>
+    <nav>
+      <button id="inicio" class="nav-button">Início</button>
+      <button id="feedback" class="nav-button">Feedback</button>
+      <button id="membros" class="nav-button">Membros</button>
+      <button id="noticias" class="nav-button">Notícias</button>
+    </nav>
+    
+    <div class="atom-container">
+      <h1 id="atom-text" class="atom-text">GRÊMIO ATOM</h1>
+      <img id="header-image" class="header-image" src="./imagens/header-image.png" alt="Grêmio Image">
+      <div class="social-links">
+        <a href="https://www.instagram.com/ATOMFL" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png"
+            alt="Instagram">
+        </a>
+        <span>Sociais</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section id="inicio-section" class="active-section">
+      <h2>Bem-vindos ao Grêmio <span style="color:#558BFF; text-shadow: 0 0 5px #558BFF;">ATOM</span>!</h2>
+      <p>Espaço dedicado à voz dos estudantes.</p>
+      <h3>Nossas Propostas</h3>
+        <ul>
+            <li>
+                <h4>Iniciativas de Eventos Clássicos (I.E.C)</h4>
+                <p><strong>Proposta:</strong> Retomar os interclasses antigos, focando em competições esportivas entre as turmas. Serão oferecidas modalidades variadas como futsal, vôlei, basquete e atletismo, incentivando a participação de todos os alunos, independentemente do nível técnico.</p>
+                <p>Além disso, haverá premiações para destacar o espírito esportivo e a cooperação entre os times, promovendo valores como respeito e trabalho em equipe.</p>
+                <p><strong>Objetivo:</strong> Fortalecer o senso de comunidade escolar, proporcionando momentos de lazer e integração através do esporte.</p>
+                <!-- Place image related to classic sports events here -->
+            </li>
+            <li>
+                <h4>Iniciativas de Eventos Modernos (I.E.M)</h4>
+                <p><strong>Proposta:</strong> Implementação de oficinas de tecnologia e inovação, incluindo robótica pedagógica e desenvolvimento de projetos científicos práticos. Os alunos poderão aprender sobre programação básica, montagem de circuitos e automação, sempre com aplicação voltada para o ensino e aprendizado.</p>
+                <p>Além disso, haverá competições saudáveis de projetos inovadores, onde os estudantes poderão desenvolver soluções para problemas do dia a dia na escola.</p>
+                <p><strong>Objetivo:</strong> Estimular o interesse por ciência e tecnologia, alinhado às diretrizes pedagógicas, incentivando o pensamento crítico e a criatividade.</p>
+                <!-- Place image related to technology and innovation workshops here -->
+            </li>
+            <li>
+                <h4>Reclame Aqui</h4>
+                <p><strong>Proposta:</strong> Criar um canal de comunicação entre os alunos e o Grêmio através de QR codes espalhados pelos corredores, onde os estudantes poderão enviar sugestões e reclamações de forma rápida e anônima.</p>
+                <p>Essas mensagens serão compiladas e analisadas pelo Grêmio para propor soluções junto à direção da escola.</p>
+                <p><strong>Objetivo:</strong> Tornar o Grêmio mais acessível e responsivo às necessidades dos alunos, garantindo que suas vozes sejam ouvidas e que melhorias sejam implementadas de forma contínua.</p>
+                <!-- Place image related to QR codes and student feedback here -->
+            </li>
+            <li>
+                <h4>Reformulação do Proatec Mirim (R.P.M)</h4>
+                <p><strong>Proposta:</strong> Revisar o programa do Proatec Mirim para que ele tenha um impacto maior no desenvolvimento dos alunos. A ideia é criar benefícios extras, como certificados de participação e pequenos incentivos acadêmicos para quem se destaca no auxílio das atividades da escola.</p>
+                <p><strong>Objetivo:</strong> Valorizar o engajamento dos alunos na organização e funcionamento da escola, tornando o Proatec Mirim uma experiência enriquecedora tanto para os estudantes quanto para a comunidade escolar.</p>
+                <!-- Place image related to Proatec Mirim program here -->
+            </li>
+            <li>
+                <h4>Foco na Formatura</h4>
+                <p>A formatura é um dos momentos mais esperados do terceiro ano, mas também pode ser cara e difícil de organizar. O nosso Grêmio quer facilitar esse processo para que todos possam aproveitar ao máximo.</p>
+                <h5>1. Apoio na Organização da Formatura</h5>
+                <p><strong>Comissão de Formatura:</strong> Vamos ajudar a estruturar um grupo responsável pela formatura, garantindo que todos tenham voz e transparência nos custos.</p>
+                <p><strong>Parceria com Empresas:</strong> Buscaremos descontos e condições especiais para salão, buffet, fotografia e convites, reduzindo os custos para os alunos.</p>
+                <p><strong>Venda de Produtos para Arrecadar Fundos:</strong> Organização de rifas, venda de camisetas personalizadas e eventos para arrecadar dinheiro e tornar a formatura acessível para todos.</p>
+                
+                <h5>2. Baile e Eventos Pré-Formatura</h5>
+                <p><strong>Baile de Formatura Inesquecível:</strong> Apoio na escolha do tema, organização e busca por um local que atenda às expectativas da turma.</p>
+                <p><strong>Pré-Formatura e Último Dia do Terceirão:</strong> Organização de um dia especial com homenagens, brincadeiras e despedida divertida entre os alunos e professores.</p>
+                <p><strong>Tarde do Capelo:</strong> Um evento simbólico onde os formandos recebem seus capelos (chapéu de formatura) para fotos e comemoração na escola.</p>
+                
+                <h5>3. Lembranças do Ensino Médio</h5>
+                <p><strong>Livro do Terceirão:</strong> Um álbum digital ou impresso com fotos, mensagens de colegas e professores, e memórias do Ensino Médio.</p>
+                <p><strong>Vídeo de Despedida:</strong> Uma retrospectiva com os melhores momentos da turma, incluindo vídeos engraçados, depoimentos e homenagens.</p>
+                <p><strong>Mural do Terceirão:</strong> Um espaço na escola para os alunos deixarem mensagens e assinaturas como lembrança da turma.</p>
+                
+                <p>Nosso objetivo é garantir que todos tenham uma formatura incrível e acessível, sem que o custo seja um obstáculo.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="feedback-section" class="hidden-section">
+      <h2>Deixe seu Feedback</h2>
+      <p style="color: red; animation: pulseWarning 2s infinite;"> Prezamos pelo respeito e bom senso em cada mensagem! </p>
+      <style>
+        @keyframes pulseWarning {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+      </style>
+      <div id="anonymous-check-container">
+        <input type="checkbox" id="anonymous-check">
+        <label for="anonymous-check" id="anonymous-check-label">Desejo enviar anonimamente</label>
+      </div>
+      <p id="anonymous-check-description">Caso a opção de colocar nome e série não apareça, ative e desative a opção (desejo enviar anonimamente) para corrigir o erro</p>
+
+      <div id="feedback-form">
+        <input type="text" id="name" placeholder="Nome (Opcional)" style="display: none;"><br>
+        <input type="text" id="serie" placeholder="Série (Opcional)" style="display: none;"><br>
+        <textarea id="feedback-text" placeholder="Escreva aqui..."></textarea>
+        <button id="submit-feedback">Enviar Feedback</button>
+      </div>
+    </section>
+
+    <section id="membros-section" class="hidden-section">
+      <h2>Membros Atuais</h2>
+      <ul>
+        <li>
+          <h4>Presidente</h4>
+          <p>Arthur 2B - Responsável pela liderança geral e representação do grêmio.</p>
+        </li>
+        <li>
+          <h4>Vice-Presidente</h4>
+          <p>João 2A - Auxilia o presidente e assume suas funções na ausência.</p>
+        </li>
+        <li>
+          <h4>Comunicação</h4>
+          <p>Geovana 3B - Encarregada da comunicação interna e externa do grêmio.</p>
+        </li>
+        <li>
+          <h4>Finanças</h4>
+          <p>Rodrigo 2A - Gerencia os recursos financeiros do grêmio.</p>
+        </li>
+        <li>
+          <h4>Esporte</h4>
+          <p>Rafael 1A - Organiza e promove atividades esportivas na escola.</p>
+        </li>
+        <li>
+          <h4>Eventos</h4>
+          <p>Yasmin 1C - Planeja e coordena eventos escolares.</p>
+        </li>
+        <li>
+          <h4>Cultural</h4>
+          <p>Vinícius 8A - Promove atividades culturais e artísticas.</p>
+        </li>
+        <li>
+          <h4>Presidente tecnológico</h4>
+          <p>Léo 2A - Lidera as iniciativas tecnológicas do grêmio.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="noticias-section" class="hidden-section">
+        <h2>Notícias</h2>
+        <div class="news-item">
+          <p style="text-align: right; font-size: 0.8em; color: #ccc;">Publicado em: 18/03/2025</p>
+          <h3 style="color: #558BFF; text-align: center;">📢 ELEIÇÃO GRÊMIO ESTUDANTIL – VOTAÇÃO DIA 20/03 🗳️</h3>
+          <p>A grande decisão está chegando! No dia 20 de março, os alunos vão escolher entre as chapas ATOM, Império e Fênix para definir quem vai representar o Grêmio Estudantil neste ano.</p>
+          <p>Sua participação é essencial! Pense bem, avalie as propostas e vote com consciência. O futuro do grêmio está em suas mãos!</p>
+          <p>#EleiçõesGrêmio #VoteConsciente #ATOM</p>
+          <img src="./imagens/eleição.jpg" alt="Election Image" style="width: 40%; max-width: 300px; display: block; margin: 20px auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+          <button id="like-button">
+            <span id="like-icon">🖤</span> 
+          </button>
+        </div>
+        <div class="news-item">
+          <p style="text-align: right; font-size: 0.8em; color: #ccc;">Publicado em: 17/03/2025</p>
+          <h3 style="color: #558BFF; text-align: center;">Chapa ATOM se destaca no debate!</h3>
+          <p>No debate do Grêmio Estudantil, a Chapa ATOM se destacou com respostas seguras e bem fundamentadas, demonstrando preparo e confiança. Sua postura firme fortaleceu ainda mais sua imagem entre os alunos.</p>
+          <p>As outras chapas também trouxeram propostas interessantes, mas em alguns momentos tiveram dificuldades em responder com a mesma clareza. No geral, o debate ajudou os alunos a conhecerem melhor as opções, mas a ATOM saiu ainda mais fortalecida da disputa.</p>
+          <img src="./imagens/destaque.jpg" alt="Debate Image" style="width: 60%; max-width: 450px; display: block; margin: 20px auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+          <button id="like-button-destaque">
+            <span id="like-icon-destaque">🖤</span> 
+          </button>
+        </div>
+        <div class="news-item">
+          <p style="text-align: right; font-size: 0.8em; color: #ccc;">Publicado em: 15/03/2025</p>
+          <h3 style="color: #558BFF; text-align: center;">Preparados para o debate no dia 17/03? 🎤📚</h3>
+          <p>O grande dia está chegando! No dia 17 de março, os times do grêmio estudantil irão se enfrentar em um debate cheio de ideias e propostas para a nossa escola. Quem será que apresentará os melhores argumentos? 🤔🔥</p>
+          <img src="./imagens/debate-image.jpg" alt="Debate Image" style="width: 80%; max-width: 600px; display: block; margin: 20px auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+          <button id="like-button-debate">
+            <span id="like-icon-debate">🖤</span> 
+          </button>
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>developer: Bilu/Leonardo 2 A</p>
+    <img src="./imagens/developer-image.jpg" alt="Developer Image">
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('loaded');
+    });
+  </script>
+</body>
+
+</html>
